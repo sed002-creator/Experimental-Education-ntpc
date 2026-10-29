@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新北市非學校型態實驗教育申請作業指南</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.4s ease-in-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; }
+        .faq-icon { transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased font-sans">
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-teal-600 to-teal-800 text-white py-16 px-4 shadow-lg relative overflow-hidden">
+        <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-white/20 backdrop-blur-sm text-sm font-bold mb-4 border border-white/30">
+                <i class="fa-solid fa-leaf mr-2"></i>最新申請流程
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-wide drop-shadow-md">
+                新北市實驗教育申請作業指南
+            </h1>
+            <p class="text-lg md:text-xl font-medium mb-10 opacity-90 max-w-2xl mx-auto leading-relaxed">
+                提供給非學校型態實驗教育申請者的專屬流程指引，請先選擇您的申請身分以查看詳情。
+            </p>
+            <a href="https://nee.ntpc.edu.tw/?page=2&Type=0" target="_blank" class="inline-flex items-center bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                <i class="fas fa-bullhorn mr-2"></i> 查看最新官方公告
+            </a>
+        </div>
+        
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-10 pointer-events-none">
+            <i class="fas fa-book-open text-9xl absolute -top-10 -left-10 transform -rotate-12"></i>
+            <i class="fas fa-graduation-cap text-9xl absolute -bottom-10 -right-10 transform rotate-12"></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold text-teal-800 mb-2">請先選擇您的申請身分</h2>
+            <div class="w-16 h-1 bg-orange-500 mx-auto rounded-full mb-4"></div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10">
+            <button id="btn-tab-1" onclick="switchTab('tab-1')" class="tab-btn bg-teal-600 text-white shadow-md font-bold py-3 px-6 rounded-xl text-lg border border-transparent hover:shadow-lg transition-all focus:outline-none flex-grow sm:flex-grow-0 flex items-center justify-center">
+                <i class="fas fa-child-reaching mr-2 text-xl"></i>國中小個人
+            </button>
+            <button id="btn-tab-2" onclick="switchTab('tab-2')" class="tab-btn bg-white text-teal-700 hover:bg-teal-50 font-bold py-3 px-6 rounded-xl text-lg border border-teal-200 shadow-sm hover:shadow-md transition-all focus:outline-none flex-grow sm:flex-grow-0 flex items-center justify-center">
+                <i class="fas fa-handshake mr-2 text-xl"></i>高中職與學校合作
+            </button>
+            <button id="btn-tab-3" onclick="switchTab('tab-3')" class="tab-btn bg-white text-teal-700 hover:bg-teal-50 font-bold py-3 px-6 rounded-xl text-lg border border-teal-200 shadow-sm hover:shadow-md transition-all focus:outline-none flex-grow sm:flex-grow-0 flex items-center justify-center">
+                <i class="fas fa-person-walking-arrow-right mr-2 text-xl"></i>高中職不與學校合作
+            </button>
+            <button id="btn-tab-4" onclick="switchTab('tab-4')" class="tab-btn bg-white text-teal-700 hover:bg-teal-50 font-bold py-3 px-6 rounded-xl text-lg border border-teal-200 shadow-sm hover:shadow-md transition-all focus:outline-none flex-grow sm:flex-grow-0 flex items-center justify-center">
+                <i class="fas fa-users mr-2 text-xl"></i>團體
+            </button>
+        </div>
+
+        <!-- Dynamic Content Containers -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            
+            <!-- ===================== TAB 1: 國中小個人 ===================== -->
+            <div id="tab-1" class="tab-content block animate-fade-in">
+                <div class="bg-teal-50 border-b border-teal-100 px-6 py-4">
+                    <h3 class="text-xl font-bold text-teal-800 flex items-center">
+                        <i class="fas fa-child-reaching text-teal-600 mr-3 text-2xl"></i> 國中小個人 申請流程
+                    </h3>
+                </div>
+                
+                <div class="p-6 md:p-8">
+                    <!-- 步驟 -->
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">一</span>線上系統申請步驟</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-slate-600 mb-10 ml-2 bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <li>前往<a href="https://nee.ntpc.edu.tw/" target="_blank" class="text-teal-600 font-bold underline">申請暨審議作業系統</a>註冊帳號。</li>
+                        <li>於期限內線上填寫申請表。</li>
+                        <li>線上填妥並上傳資料後，列印系統產生的申請書、家長聲明書及家長需求表。</li>
+                        <li>由法定代理人簽名後，將紙本送至<strong class="text-orange-600">戶籍所在地的設籍學校</strong>。</li>
+                        <li>設籍學校檢核資料齊全並核章後，由學校端掃描上傳完成作業。</li>
+                    </ol>
+
+                    <!-- 表單 -->
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">二</span>必須上傳與繳交之表單清單</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-pdf text-orange-500 w-8 text-center"></i><span class="text-slate-700 font-medium">教學計畫書</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-signature text-orange-500 w-8 text-center"></i><span class="text-slate-700 font-medium">申請書 (需列印簽名)</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-contract text-orange-500 w-8 text-center"></i><span class="text-slate-700 font-medium">家長聲明書 (需列印簽名)</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-list-check text-orange-500 w-8 text-center"></i><span class="text-slate-700 font-medium">家長需求勾選表 (需列印簽名)</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm md:col-span-2"><i class="fas fa-id-card text-orange-500 w-8 text-center"></i><span class="text-slate-700 font-medium">戶口名簿影本</span></li>
+                    </ul>
+
+                    <!-- FAQ -->
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">三</span>常見問題</h4>
+                    <div class="space-y-3">
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('1-1')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                戶籍不在新北市可以申請嗎？
+                                <i id="icon-1-1" class="fas fa-chevron-down faq-icon text-teal-600"></i>
+                            </button>
+                            <div id="faq-1-1" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100">
+                                不行。依規定個人實驗教育必須由法定代理人向「戶籍所在地」提出申請。
+                            </div>
+                        </div>
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('1-2')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                紙本資料要送去哪裡？
+                                <i id="icon-1-2" class="fas fa-chevron-down faq-icon text-teal-600"></i>
+                            </button>
+                            <div id="faq-1-2" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100">
+                                家長列印並簽名後，請將紙本送至**設籍學校**，由學校統一掃描上傳。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== TAB 2: 高中職與學校合作 ===================== -->
+            <div id="tab-2" class="tab-content hidden animate-fade-in">
+                <div class="bg-teal-50 border-b border-teal-100 px-6 py-4">
+                    <h3 class="text-xl font-bold text-teal-800 flex items-center">
+                        <i class="fas fa-handshake text-teal-600 mr-3 text-2xl"></i> 高中職與學校合作 申請流程
+                    </h3>
+                </div>
+                
+                <div class="p-6 md:p-8">
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">一</span>線上系統申請步驟</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-slate-600 mb-10 ml-2 bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <li>與欲合作之高中職學校洽談，確認合作意願。</li>
+                        <li>於線上系統註冊帳號並填妥申請表。</li>
+                        <li>務必上傳**與學校合作計畫書、會議紀錄及簽到表** (須有學校核章)。</li>
+                        <li>列印相關紙本表單，簽名後送至合作之設籍學校檢核。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">二</span>必須上傳與繳交之表單清單</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-check-circle text-teal-500 w-8 text-center"></i><span class="text-slate-700">申請表</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-check-circle text-teal-500 w-8 text-center"></i><span class="text-slate-700">實驗教育計畫書</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-check-circle text-teal-500 w-8 text-center"></i><span class="text-slate-700">家長聲明書</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-check-circle text-teal-500 w-8 text-center"></i><span class="text-slate-700">家長需求表</span></li>
+                        <li class="flex items-center bg-orange-50 p-3 rounded-lg border border-orange-200 shadow-sm"><i class="fas fa-handshake-angle text-orange-500 w-8 text-center"></i><span class="text-orange-800 font-bold">與學校合作計畫書 (須核章)</span></li>
+                        <li class="flex items-center bg-orange-50 p-3 rounded-lg border border-orange-200 shadow-sm"><i class="fas fa-users-viewfinder text-orange-500 w-8 text-center"></i><span class="text-orange-800 font-bold">會議紀錄及簽到表</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-graduation-cap text-teal-500 w-8 text-center"></i><span class="text-slate-700">國中學力證明</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-id-card text-teal-500 w-8 text-center"></i><span class="text-slate-700">戶口名簿</span></li>
+                    </ul>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">三</span>常見問題</h4>
+                    <div class="space-y-3">
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('2-1')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                一定要附上會議紀錄嗎？
+                                <i id="icon-2-1" class="fas fa-chevron-down faq-icon text-teal-600"></i>
+                            </button>
+                            <div id="faq-2-1" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100">
+                                是的，高中職申請案欲與學校合作者，務必上傳有學校核章的合作計畫書、會議紀錄及簽到表。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== TAB 3: 高中職不與學校合作 ===================== -->
+            <div id="tab-3" class="tab-content hidden animate-fade-in relative border-t-8 border-red-500">
+                <div class="bg-red-50 border-b border-red-100 px-6 py-4 flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-red-800 flex items-center">
+                        <i class="fas fa-school-slash text-red-600 mr-3 text-2xl"></i> 高中職不與學校合作
+                    </h3>
+                    <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded animate-pulse">重要防呆提醒</span>
+                </div>
+                
+                <div class="p-6 md:p-8">
+                    <!-- Massive Warning -->
+                    <div class="bg-red-50 border-l-8 border-red-500 p-6 rounded-r-xl mb-10 shadow-sm relative overflow-hidden">
+                        <i class="fas fa-exclamation-triangle absolute -right-4 -bottom-4 text-8xl text-red-500 opacity-10"></i>
+                        <h4 class="text-red-700 font-bold text-xl mb-3"><i class="fas fa-triangle-exclamation mr-2"></i>紙本資料遞交方式</h4>
+                        <p class="text-red-800 text-lg font-medium leading-relaxed relative z-10">
+                            紙本資料必須列印出並寄送或親送至<strong class="bg-white px-2 py-1 mx-1 rounded shadow-sm text-red-600">『新北市立光復高中輔導室』</strong><br>
+                            或寄至信箱：<a href="mailto:newtaipeicitygfhs@gmail.com" class="underline font-bold text-blue-600 bg-white px-1 rounded">newtaipeicitygfhs@gmail.com</a>，<br>
+                            <span class="inline-block mt-2 font-black text-xl text-red-600">否則不予受理！</span>
+                        </p>
+                    </div>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-red-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">一</span>線上系統申請步驟</h4>
+                    <ol class="list-decimal list-inside space-y-3 text-slate-600 mb-10 ml-2 bg-slate-50 p-5 rounded-xl border border-slate-100">
+                        <li>完成線上系統資料填寫。</li>
+                        <li>上傳電子表單與學力證明。</li>
+                        <li>列印出系統產生之紙本文件並簽名。</li>
+                        <li>依循上方紅框指示，將資料送至光復高中。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-red-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">二</span>表單清單</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10">
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-alt text-slate-400 w-6 text-center"></i><span class="text-slate-700 text-sm">申請表</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-alt text-slate-400 w-6 text-center"></i><span class="text-slate-700 text-sm">實驗教育計畫書</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-alt text-slate-400 w-6 text-center"></i><span class="text-slate-700 text-sm">家長聲明書</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-alt text-slate-400 w-6 text-center"></i><span class="text-slate-700 text-sm">家長需求表</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-alt text-slate-400 w-6 text-center"></i><span class="text-slate-700 text-sm">學力證明</span></li>
+                        <li class="flex items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><i class="fas fa-file-alt text-slate-400 w-6 text-center"></i><span class="text-slate-700 text-sm">戶口名簿</span></li>
+                    </ul>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-red-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">三</span>常見問題</h4>
+                    <div class="space-y-3">
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('3-1')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                學籍在哪裡？
+                                <i id="icon-3-1" class="fas fa-chevron-down faq-icon text-red-600"></i>
+                            </button>
+                            <div id="faq-3-1" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100">
+                                未與學校合作者，不具備高中學籍，學生學籍由教育局造冊列管。
+                            </div>
+                        </div>
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('3-2')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                紙本能送以前國中嗎？
+                                <i id="icon-3-2" class="fas fa-chevron-down faq-icon text-red-600"></i>
+                            </button>
+                            <div id="faq-3-2" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100 font-bold text-red-600">
+                                不行，只能送至光復高中輔導室。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== TAB 4: 團體申請 ===================== -->
+            <div id="tab-4" class="tab-content hidden animate-fade-in">
+                <div class="bg-teal-50 border-b border-teal-100 px-6 py-4">
+                    <h3 class="text-xl font-bold text-teal-800 flex items-center">
+                        <i class="fas fa-users text-teal-600 mr-3 text-2xl"></i> 團體申請流程
+                    </h3>
+                </div>
+                
+                <div class="p-6 md:p-8">
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">一</span>線上系統申請步驟</h4>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 mb-10">
+                        <p class="text-slate-700 mb-3"><i class="fas fa-info-circle text-teal-500 mr-2"></i> 註冊團體帳號，填寫團體基本資料，並於系統介面逐一新增學生名冊。最重要的一步：</p>
+                        <div class="bg-white border-l-4 border-orange-500 p-4 rounded shadow-sm text-slate-800 font-bold">
+                            下載申請表後，必須將申請表 PDF 檔合併到您的「教學計畫書」的最前面（第1頁），再進行上傳。
+                        </div>
+                    </div>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">二</span>必須上傳與繳交之表單清單</h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
+                        <li class="flex items-start bg-orange-50 p-3 rounded-lg border border-orange-200 shadow-sm"><span class="bg-orange-200 text-orange-800 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">1</span><span class="text-orange-900 font-bold">教學計畫書 <span class="text-xs block text-orange-600">(須與申請書合併)</span></span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">2</span><span class="text-slate-700">學生名冊</span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">3</span><span class="text-slate-700">家長聲明書</span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">4</span><span class="text-slate-700">主持人及參與人員資料</span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">5</span><span class="text-slate-700">領域協同教學契約書</span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">6</span><span class="text-slate-700">教學場地證明 <span class="text-xs block text-slate-500">(含消防與公安)</span></span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">7</span><span class="text-slate-700">戶口名簿</span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">8</span><span class="text-slate-700">學歷證明</span></li>
+                        <li class="flex items-start bg-white p-3 rounded-lg border border-slate-200 shadow-sm md:col-span-2"><span class="bg-slate-200 text-slate-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5 shrink-0">9</span><span class="text-slate-700">經費來源及財務規劃</span></li>
+                    </ul>
+
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><span class="bg-teal-500 text-white w-7 h-7 rounded-full inline-flex items-center justify-center mr-2 text-sm">三</span>常見問題</h4>
+                    <div class="space-y-3">
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('4-1')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                教學場地有什麼限制？
+                                <i id="icon-4-1" class="fas fa-chevron-down faq-icon text-teal-600"></i>
+                            </button>
+                            <div id="faq-4-1" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100">
+                                學生學習活動教室內場地使用面積，每人不得少於 1.5 平方公尺，且樓層以五樓以下為原則。
+                            </div>
+                        </div>
+                        <div class="border border-slate-200 rounded-xl overflow-hidden">
+                            <button onclick="toggleFaq('4-2')" class="w-full text-left px-5 py-4 bg-slate-50 hover:bg-slate-100 font-bold text-slate-700 flex justify-between items-center focus:outline-none transition-colors">
+                                如何上傳申請書與計畫書？
+                                <i id="icon-4-2" class="fas fa-chevron-down faq-icon text-teal-600"></i>
+                            </button>
+                            <div id="faq-4-2" class="hidden px-5 py-4 bg-white text-slate-600 border-t border-slate-100">
+                                請將系統下載的「申請書」 PDF 檔，合併到您的「教學計畫書」的最前面，成為單一檔案後再行上傳。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer / Anti-Error Warning -->
+    <footer class="bg-slate-800 text-slate-200 py-12 mt-8 border-t-8 border-teal-600">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            
+            <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 mb-8 shadow-inner relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 opacity-5 text-orange-500"><i class="fas fa-shield-alt text-9xl"></i></div>
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center justify-center relative z-10">
+                    <i class="fas fa-exclamation-circle text-orange-500 mr-3 text-3xl"></i> 帳號登入重要防呆提醒
+                </h3>
+                <p class="text-lg text-slate-300 mb-6 relative z-10">
+                    如果您忘記密碼或無法登入，<strong class="text-orange-400 text-xl border-b-2 border-orange-500 pb-1">絕對不要重新註冊多個帳號</strong>，以免影響您的申請權益與資料異常！
+                </p>
+                <div class="inline-block bg-slate-800 rounded-xl p-6 border border-slate-600 relative z-10 text-left">
+                    <p class="text-sm text-slate-400 mb-2 uppercase tracking-wider font-bold">請立即聯繫教育局承辦人員：</p>
+                    <p class="text-lg mb-2"><i class="fas fa-phone-alt text-teal-400 mr-3 w-5 text-center"></i> (02) 2960-3456 分機 <span class="font-mono bg-slate-700 px-1 rounded text-white">2821</span> 或 <span class="font-mono bg-slate-700 px-1 rounded text-white">2619</span></p>
+                    <p class="text-lg"><i class="fas fa-envelope text-teal-400 mr-3 w-5 text-center"></i> <a href="mailto:AN3365@ntpc.gov.tw" class="font-mono bg-slate-700 px-2 py-1 rounded text-white hover:bg-teal-600 transition-colors">AN3365@ntpc.gov.tw</a></p>
+                </div>
+            </div>
+
+            <p class="font-bold text-slate-400 mb-2">新北市高級中等以下教育階段非學校型態實驗教育申請專區</p>
+            <p class="text-sm opacity-50">&copy; 2026 參考新北市教育局作業指南製作</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('animate-fade-in');
+            });
+            
+            // Reset all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('bg-teal-600', 'text-white', 'shadow-md', 'shadow-lg');
+                el.classList.add('bg-white', 'text-teal-700', 'hover:bg-teal-50');
+            });
+            
+            // Show selected content and add animation class
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.remove('hidden');
+            // Trigger reflow to restart animation
+            void activeTab.offsetWidth;
+            activeTab.classList.add('animate-fade-in');
+            
+            // Highlight selected button
+            const btn = document.getElementById('btn-' + tabId);
+            btn.classList.remove('bg-white', 'text-teal-700', 'hover:bg-teal-50');
+            btn.classList.add('bg-teal-600', 'text-white', 'shadow-md');
+        }
+
+        function toggleFaq(id) {
+            const faq = document.getElementById('faq-' + id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                icon.parentElement.classList.add('bg-teal-50', 'text-teal-800');
+                icon.parentElement.classList.remove('bg-slate-50', 'text-slate-700');
+            } else {
+                faq.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                icon.parentElement.classList.remove('bg-teal-50', 'text-teal-800');
+                icon.parentElement.classList.add('bg-slate-50', 'text-slate-700');
+            }
+        }
+    </script>
+</body>
+</html>
